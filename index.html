@@ -15,7 +15,8 @@
   </head>
   <body>
 
-    <div class="container d-flex align-items-center justify-content-center">
+
+    <div class="container p-5 d-flex align-items-center justify-content-center">
       <div class="row align-items-center justify-content-center">
         <div class="col align-items-center justify-content-center">
           <div class="row align-items-center" id="row1HEAD">
@@ -23,6 +24,7 @@
               <h1>TIC-TAC-TOE</h1>
             </div>
           </div>
+          <br>
           <br>
           <div class="row justify-content-center" id="row2TURN">
             <div class="col justify-content-center text-center" id="WhoseTurn">
@@ -32,41 +34,62 @@
             </div>
           </div>
           <br>
-          <div class="row" id="row3GAME">
+          <br>
+          <div class="row justify-content-center align-items-center" id="row3GAME">
+            <div class="border border-primary d-flex">
             <div class="col-3" id="Player1">
               <div class="box">
                 <span class="border border-dark" id="turnBox"> Player 1 Score </span>
               </div>
             </div>
             <div class="col-6" id="Grid">
-              <div class="box">
-                <div class="grid text-center" style="--bs-gap: .25rem 1rem;">
-                  <div class="row">
-                    <div class="g-col-4">Row one left box</div>
-                    <div class="g-col-4">Row one middle box</div>
-                    <div class="g-col-4">Row one right box</div>
+              <div class="box text-center">
+                <div class="row" id="topRow">
+                  <div class="col-4">
+                    top left
                   </div>
-
-                  <div class="row">
-                    <div class="g-col-4">Row two left box</div>
-                    <div class="g-col-4">Row two middle box</div>
-                    <div class="g-col-4">Row two right box</div>
+                  <div class="col-4">
+                    top middle
                   </div>
-
-                  <div class="row">
-                    <div class="g-col-4">Row three left box</div>
-                    <div class="g-col-4">Row three middle box</div>
-                    <div class="g-col-4">Row three right box</div>
+                  <div class="col-4">
+                    top right
                   </div>
                 </div>
+                <div class="row" id="middleRow">
+                  <div class="col-4">
+                    middle left
+                  </div>
+                  <div class="col-4">
+                    middle middle
+                  </div>
+                  <div class="col-4">
+                    middle right
+                  </div>
+                </div>
+                <div class="row" id="bottomRow">
+                  <div class="col-4">
+                    bottom left
+                  </div>
+                  <div class="col-4">
+                    bottom middle
+                  </div>
+                  <div class="col-4">
+                    bottom right
+                  </div>
+                </div>
+                </div>
+                </div>
+                <div class="col-3 justify-content-center" id="Player2">
+                  <div class="box">
+                    <span class="border border-dark" id="turnBox"> Player 2 Score </span>
+                  </div>
               </div>
-            </div>
-            <div class="col-3" id="Player2">
-              <div class="box">
-                <span class="border border-dark" id="turnBox"> Player 2 Score </span>
               </div>
             </div>
           </div>
+          </div>
+        </div>
+      </div>
           <br>
           <div class="row justify-content-center" id="row4RESET">
             <div class="col text-center justify-content-center" id="col">
@@ -78,6 +101,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 
     

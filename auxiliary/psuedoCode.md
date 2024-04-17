@@ -14,4 +14,53 @@ Moon:
 </svg>
 
 <i class="bi bi-moon-fill"></i>
+
+
+
+    <div class="grid text-center" style="--bs-gap: .25rem 1rem;">
+                  <div class="row">
+                    <div class="g-col-4">Row one left box</div>
+                    <div class="g-col-4">Row one middle box</div>
+                    <div class="g-col-4">Row one right box</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="g-col-4">Row two left box</div>
+                    <div class="g-col-4">Row two middle box</div>
+                    <div class="g-col-4">Row two right box</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="g-col-4">Row three left box</div>
+                    <div class="g-col-4">Row three middle box</div>
+                    <div class="g-col-4">Row three right box</div>
+                  </div>
+                </div>
  -->
+
+ <!--
+
+  <div class="container d-flex justify-content-center align-content-center" id="pageContainer">
+    <div class="row d-flex align-content-center">
+      <div class="col d-flex justify-content-center align-content-center">
+        <div class="container d-flex" id="headerContainer">
+          
+        </div>
+        <div class="container" id="playerTurnContainer">
+          
+        </div>
+        <div class="container" id="gameContainer">
+          
+        </div>
+        <div class="container" id="resetContainer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+-->
