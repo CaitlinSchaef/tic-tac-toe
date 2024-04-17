@@ -18,6 +18,7 @@ body {
 h1 {
   color: white;
   text-align: center;
+  font-size: 60px;
 }
 
 /* #box {
@@ -39,8 +40,18 @@ h1 {
 
 }
 
+/* you have to set a border style for it to display */
+
 #gameBox {
   border: 5px;
   border-color: purple;
+  border-style: solid;
 
+}
+
+#turnDisplay {
+  border: 3px;
+  border-color: blueviolet;
+  background-color: aliceblue;
+  border-style: solid;
 }
