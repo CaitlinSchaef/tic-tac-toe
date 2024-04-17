@@ -35,5 +35,12 @@ h1 {
   max-height: auto;
   max-width: auto;
   margin-top: 200px;
+  margin-bottom: 200px;
+
+}
+
+#gameBox {
+  border: 5px;
+  border-color: purple;
 
 }
