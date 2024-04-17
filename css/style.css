@@ -1,6 +1,28 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+body {
+  background-image: url("../assets/pinkSky.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+/* attachment is what let you wrap it to the screen properly */
+  background-attachment: fixed;
+  overflow: hidden;
+
+  /* font-family: basco-std, serif;
+  font-style: normal;
+  font-weight: 800;
+  color: #3e685d; */
+}
 
 h1 {
-  color: pink;
+  color: white;
 }
+
+/* #box {
+  width: fit-content;
+  height: fit-content;
+  border: 2px white;
+  padding: 10px;
+  margin: 10px;
+} */
