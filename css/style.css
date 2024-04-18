@@ -16,7 +16,8 @@ body {
 }
 
 h1 {
-  color: white;
+  color: #7c6d84;
+  text-shadow: 5px 5px 5px #e6d0dc;
   text-align: center;
   font-size: 60px;
 }
@@ -95,6 +96,14 @@ h1 {
   border-color: #5a495a;
   border-style: solid;
   background-color: #d59ab566;
+}
+
+#scoreHead1 {
+  border-bottom: solid #5a495a;
+}
+
+#scoreHead2 {
+  border-bottom: solid #5a495a;
 }
 
 #twoScore {
