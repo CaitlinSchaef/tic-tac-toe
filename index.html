@@ -15,73 +15,69 @@
   </head>
   <body>
 
-    <div class="container" id="mainBody">
-      <div class="row">
-        <div class="col-lg">
-            <div class="row bg-danger" id="headerRow">
-              <div class="col-lg bg-danger">
-                <h1>TIC-TAC-TOE</h1>
-              </div>
+    <br>
+    <br>
+    <!-- Main Container of Page-->
+    <div class="container vh-100 justify-content-center">
+      <!-- Row 1 of 4-->
+      <div class="row" id="row1">
+        <div class="col-12 mb-3 justify-content-center" id="r1c1">
+          <div class="header text-center"><h1>TIC-TAC-TOE</h1></div>
+        </div>
+      </div> <!-- End of first row -->
+      <br>
+      <!-- Row 2 of 4 -->
+      <div class="row justify-content-center" id="row2">
+        <div class="col-6 text-center id="r2c1">
+          <div class="form-control" id="playerTurn">Display Player Turn</div>
+        </div>
+      </div> <!-- Eng of second row -->
+      <br>
+      <br>
+      <!-- Row 3 of 4 -->
+      <div class="row justify-content-center text-center" id="gameRow">
+        <!-- Far left player 1 score column -->
+        <div class="col-3" id="oneScore">
+          <div>Player 1 Score: </div>
+        </div>
+        <!-- Middle Game board body -->
+        <div class="col-6" id="gameBoard">
+          <!-- Setting a container in this column -->
+          <div class="container-fluid bg-white">
+            <!-- Top Row -->
+            <div class="row" id="row1">
+              <div class="col-4 tic-box"> 1 </div>
+              <div class="col-4 tic-box"> 2 </div>
+              <div class="col-4 tic-box"> 3 </div>
             </div>
-            <br>
-            <div class="row" id="turnRow">
-              <div class="col-lg justify-content-center text-center">
-                <div id="turnDisplay">Turn: Player 1</div>
-              </div>
+            <!-- Middle Row -->
+            <div class="row" id="row2">
+              <div class="col-4 tic-box"> 4 </div>
+              <div class="col-4 tic-box"> 5 </div>
+              <div class="col-4 tic-box"> 6 </div>
             </div>
-            <br>
-            <div class="row d-flex" id="gameRow">
-              <div class="col-3 d-flex" id="player1Score">
-                p1 score
-              </div>
-              <div class="col-6" id="gameBox">
-                <div class="row d-flex" id="topRow">
-                  <div class="col-4 d-flex" id="topLeft">
-                    left
-                  </div>
-                  <div class="col-4 d-flex" id="topMiddle">
-                    middle
-                  </div>
-                  <div class="col-4 d-flex" id="topRight">
-                    right
-                  </div>
-                </div>
-                <div class="row d-flex" id="middleRow">
-                  <div class="col-4 d-flex" id="middleLeft">
-                    left
-                  </div>
-                  <div class="col-4 d-flex" id="middleMiddle">
-                    middle
-                  </div>
-                  <div class="col-4 d-flex" id="middleRight">
-                    right
-                  </div>
-                </div>
-                <div class="row d-flex" id="bottomRow">
-                  <div class="col-4 d-flex" id="bottomLeft">
-                    left
-                  </div>
-                  <div class="col-4 d-flex" id="bottomMiddle">
-                    middle
-                  </div>
-                  <div class="col-4 d-flex" id="bottomRight">
-                    right
-                  </div>
-                </div>
-              </div>
-              <div class="col-3 text-center" id="player2Score">
-                p2 score
-              </div>
+            <!-- Bottom Row -->
+            <div class="row" id="row2">
+              <div class="col-4 tic-box"> 7 </div>
+              <div class="col-4 tic-box"> 8 </div>
+              <div class="col-4 tic-box"> 9 </div>
             </div>
-            <br>
-            <br>
-            <div class="row" id="resetRow">
-              <div class="col-lg justify-content-center text-center">
-                <button class="button" id="resetBoardButton">Reset Board</button>
-              </div>
-            </div>
+          </div>
+        </div>
+        <!-- Far right player 2 score column -->
+        <div class="col-3">
+          <div> Player 2 Score: </div>
+        </div>
+      </div> <!-- End of third row -->
+      <br>
+      <br>
+      <!-- Row 4 of 4 -->
+      <div class="row" id="row4">
+        <div class="col-12 mb-3 justify-content-center" id="r4c1">
+          <div class="text-center"><button>Reset Board And Players</button></div>
         </div>
       </div>
+      <!-- Below this is main body div end tag -->
     </div>
 
     

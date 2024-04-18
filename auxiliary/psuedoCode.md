@@ -15,139 +15,77 @@ Moon:
 
 <i class="bi bi-moon-fill"></i>
 
-
-
-    <div class="grid text-center" style="--bs-gap: .25rem 1rem;">
-                  <div class="row">
-                    <div class="g-col-4">Row one left box</div>
-                    <div class="g-col-4">Row one middle box</div>
-                    <div class="g-col-4">Row one right box</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="g-col-4">Row two left box</div>
-                    <div class="g-col-4">Row two middle box</div>
-                    <div class="g-col-4">Row two right box</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="g-col-4">Row three left box</div>
-                    <div class="g-col-4">Row three middle box</div>
-                    <div class="g-col-4">Row three right box</div>
-                  </div>
-                </div>
  -->
 
  <!--
-
-  <div class="container d-flex justify-content-center align-content-center" id="pageContainer">
-    <div class="row d-flex align-content-center">
-      <div class="col d-flex justify-content-center align-content-center">
-        <div class="container d-flex" id="headerContainer">
-          
-        </div>
-        <div class="container" id="playerTurnContainer">
-          
-        </div>
-        <div class="container" id="gameContainer">
-          
-        </div>
-        <div class="container" id="resetContainer">
-
+   <div class="container" id="mainBody">
+      <div class="row">
+        <div class="col-lg">
+            <div class="row bg-danger" id="headerRow">
+              <div class="col-lg bg-danger">
+                <h1>TIC-TAC-TOE</h1>
+              </div>
+            </div>
+            <br>
+            <div class="row" id="turnRow">
+              <div class="col-lg justify-content-center text-center">
+                <div id="turnDisplay">Turn: Player 1</div>
+              </div>
+            </div>
+            <br>
+            <div class="row d-flex" id="gameRow">
+              <div class="col-3 d-flex" id="player1Score">
+                p1 score
+              </div>
+              <div class="col-6" id="gameBox">
+                <div class="row d-flex" id="topRow">
+                  <div class="col-4 d-flex" id="topLeft">
+                    left
+                  </div>
+                  <div class="col-4 d-flex" id="topMiddle">
+                    middle
+                  </div>
+                  <div class="col-4 d-flex" id="topRight">
+                    right
+                  </div>
+                </div>
+                <div class="row d-flex" id="middleRow">
+                  <div class="col-4 d-flex" id="middleLeft">
+                    left
+                  </div>
+                  <div class="col-4 d-flex" id="middleMiddle">
+                    middle
+                  </div>
+                  <div class="col-4 d-flex" id="middleRight">
+                    right
+                  </div>
+                </div>
+                <div class="row d-flex" id="bottomRow">
+                  <div class="col-4 d-flex" id="bottomLeft">
+                    left
+                  </div>
+                  <div class="col-4 d-flex" id="bottomMiddle">
+                    middle
+                  </div>
+                  <div class="col-4 d-flex" id="bottomRight">
+                    right
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 text-center" id="player2Score">
+                p2 score
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row" id="resetRow">
+              <div class="col-lg justify-content-center text-center">
+                <button class="button" id="resetBoardButton">Reset Board</button>
+              </div>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-
-    <div class="container p-5 d-flex align-items-center justify-content-center">
-      <div class="row align-items-center justify-content-center">
-        <div class="col align-items-center justify-content-center">
-          <div class="row align-items-center" id="row1HEAD">
-            <div class="col justify-content-center text-center" id="Header">
-              <h1>TIC-TAC-TOE</h1>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row justify-content-center" id="row2TURN">
-            <div class="col justify-content-center text-center" id="WhoseTurn">
-              <div class="box">
-                <span class="border border-dark" id="turnBox"> Turn: Player 1 </span>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row justify-content-center align-items-center" id="row3GAME">
-            <div class="border border-primary d-flex">
-            <div class="col-3" id="Player1">
-              <div class="box">
-                <span class="border border-dark" id="turnBox"> Player 1 Score </span>
-              </div>
-            </div>
-            <div class="col-6" id="Grid">
-              <div class="box text-center">
-                <div class="row" id="topRow">
-                  <div class="col-4">
-                    top left
-                  </div>
-                  <div class="col-4">
-                    top middle
-                  </div>
-                  <div class="col-4">
-                    top right
-                  </div>
-                </div>
-                <div class="row" id="middleRow">
-                  <div class="col-4">
-                    middle left
-                  </div>
-                  <div class="col-4">
-                    middle middle
-                  </div>
-                  <div class="col-4">
-                    middle right
-                  </div>
-                </div>
-                <div class="row" id="bottomRow">
-                  <div class="col-4">
-                    bottom left
-                  </div>
-                  <div class="col-4">
-                    bottom middle
-                  </div>
-                  <div class="col-4">
-                    bottom right
-                  </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-3 justify-content-center" id="Player2">
-                  <div class="box">
-                    <span class="border border-dark" id="turnBox"> Player 2 Score </span>
-                  </div>
-              </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-          <br>
-          <div class="row justify-content-center" id="row4RESET">
-            <div class="col text-center justify-content-center" id="col">
-              <div class="box">
-                <button class="button">Reset Board</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+ 
 
 -->

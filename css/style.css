@@ -21,6 +21,13 @@ h1 {
   font-size: 60px;
 }
 
+.tic-box {
+ al
+  width: 85px;
+  height: 85px;
+  margin-top: 10px;
+}
+
 /* #box {
   width: fit-content;
   height: fit-content;
@@ -29,7 +36,7 @@ h1 {
   margin: 10px;
 } */
 
-.container {
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,11 +45,11 @@ h1 {
   margin-top: 200px;
   margin-bottom: 200px;
 
-}
+} */
 
 /* you have to set a border style for it to display */
 
-#gameBox {
+/* #gameBox {
   border: 5px;
   border-color: purple;
   border-style: solid;
@@ -53,5 +60,5 @@ h1 {
   border-color: blueviolet;
   background-color: aliceblue;
   border-style: solid;
-}
+} */
 
