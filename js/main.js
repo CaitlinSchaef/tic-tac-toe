@@ -21,16 +21,19 @@ const scoreDisplay1 = document.getElementById('scoreDisplay1')
 const scoreDisplay2 = document.getElementById('scoreDisplay2')
 const displayWinner = document.getElementById('displayWinner')
 
-let gameWon = false 
+let p1Score = 0
+let p2Score = 0
+
+let gameWon = false
 
 let currentPlayer = 'playerOne' // 'playerOne' || 'playerTwo'
 
 
 // this pulls all of the tic-box classes & adds event listener
-let boxes = document.querySelectorAll('.tic-box')
-boxes = Array.from(boxes)
+let boxes = Array.from(document.querySelectorAll('.tic-box'))
+// boxes = Array.from(boxes)
 boxes.forEach(currentBox => {
-    currentBox.addEventListener('click', () => gamePlay(currentBox))
+    currentBox.addEventListener('click', (e) => gamePlay(e.target))
 })
 
 
@@ -44,30 +47,32 @@ boxes.forEach(currentBox => {
 
 //Function to make game work (icons appear in box when clicked)/board state
 // this works as is 
-    function gamePlay(currentBox) {
-        if (gameWon) {
-            return
-        }
-       if (currentPlayer === 'playerOne') {
-            currentBox.textContent = 'X'
-            playerTurn.textContent = "Player 2's Turn"
-            checkWin()
-            currentPlayer = 'playerTwo'
-       } else if (currentPlayer === 'playerTwo') {
-            currentBox.textContent = 'O'
-            playerTurn.textContent = "Player 1's Turn"
-            checkWin()
-            currentPlayer = 'playerOne'
-       } // every time you click you go through this once
+function gamePlay(currentBox) {
+    // console.log('clicked', currentBox, gameWon, currentBox.textContent)
+    // console.log(currentPlayer)
+    if (gameWon || currentBox.textContent !== "") {
+        return
     }
+    if (currentPlayer === 'playerOne') {
+        currentBox.textContent = 'X'
+        playerTurn.textContent = "Player 2's Turn"
+        checkWin()
+        currentPlayer = 'playerTwo'
+    } else if (currentPlayer === 'playerTwo') {
+        currentBox.textContent = 'O'
+        playerTurn.textContent = "Player 1's Turn"
+        checkWin()
+        currentPlayer = 'playerOne'
+    } // every time you click you go through this once
+}
 
 
 //Function to declare winner
 
 function checkWin() {
-    
+
     // (if the function returns true for any of the array items returns true)
-   let winner = winningRows.some(currentArray =>  {
+    let winner = winningRows.some(currentArray => {
         return currentArray.every(x => x.textContent === 'X') || currentArray.every(x => x.textContent === 'O')
         // if (currentArray[0].textContent === '' || currentArray[1].textContent === '' 
         // || currentArray[2].textContent === '') {
@@ -75,16 +80,16 @@ function checkWin() {
         // } console.log(currentArray[0].textContent)
         // return (currentArray[0].textContent === currentArray[1].textContent && 
         //     currentArray[1].textContent === currentArray[2].textContent)
-    });  
+    });
     if (winner === true) {
         displayWinner.textContent = `${currentPlayer} won!`
         gameWon = true
+        scoreDisplay(currentPlayer)
     } else {
         checkDraw()
     }
-        // maybe take out the alert and just make a text box???
-        
-    return winner
+
+
 }
 
 // function to check draw
@@ -98,11 +103,27 @@ function checkDraw() {
 }
 
 //Function to display player score
+function scoreDisplay(winner) {
+    // parameter is a variable name, the argument is a valued pass
+    //argument is in the actual calling of a function, parameter is definition
+    if (winner === 'playerOne') {
+        p1Score = p1Score + 1
+        // same as p1Score++
+        scoreDisplay1.textContent = p1Score
+    } else if (winner === 'playerTwo') {
+        p2Score++
+        // same as p2Score = p2Score + 1
+        scoreDisplay2.textContent = p2Score
+    }
+}
 
 // //Function to reset page
 // basically i need to make something that creates a conditional event listener 
+// map returns a new array, forEach does not (we don't need a new array here)
 function clearBoard() {
-    boxes.map(boxItem => boxItem.textContent = '')
+    gameWon = false;
+    // console.log('did that reset', currentPlayer, gameWon)
+    boxes.forEach(boxItem => boxItem.textContent = '')
     displayWinner.textContent = ''
     playerTurn.textContent = ''
 }
