@@ -99,7 +99,7 @@ function checkDraw() {
     let draw = boxes.every(box => box.textContent === 'X' || box.textContent === 'O')
     if (draw) {
         displayWinner.textContent = "It's a draw!"
-    }
+    } 
 }
 
 //Function to display player score

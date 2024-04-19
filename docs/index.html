@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lets Play!</title>
+    <!-- This next link sets the icon that displays in the tab-->
+    <link rel="icon" type="image/x-icon" href="/tic-tac-toe/assets/joystick-CsGzzo6u.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- project styles -->
+    <script type="module" crossorigin src="/tic-tac-toe/assets/index-7j6OGJX7.js"></script>
+    <link rel="stylesheet" crossorigin href="/tic-tac-toe/assets/index-BhQfWPyH.css">
+  </head>
+  <body>
+
+    <br>
+    <br>
+    <!-- Main Container of Page-->
+    <div class="container vh-100 justify-content-center">
+      <!-- Row 1 of 5-->
+      <div class="row" id="row1">
+        <div class="col-12 mb-3 justify-content-center" id="r1c1">
+          <div class="header text-center"><h1>TIC-TAC-TOE</h1></div>
+        </div>
+      </div> <!-- End of first row -->
+      <br>
+      <!-- Row 2 of 5 -->
+      <div class="row justify-content-center" id="row2">
+        <div class="col-3 text-center" id="r2c1">
+          <div class="form-control" id="playerTurn"></div>
+        </div>
+      </div> <!-- Eng of second row -->
+      <br>
+      <br>
+      <!-- Row 3 of 5 -->
+      <div class="row justify-content-center text-center" id="gameRow">
+        <!-- Far left player 1 score column -->
+        <div class="col-3 align-items-center justify-content-center p-3" id="scoreCol1">
+          <div id="oneScore"><div id="scoreHead1"> Player 1 Score:</div><br><br> <div id="scoreDisplay1"></div> 
+          </div>
+        </div>
+        <!-- Middle Game board body -->
+        <div class="col-6" id="gameBoard">
+          <!-- Setting a container in this column -->
+          <div class="container text-center" id="gameBox">
+            <!-- Top Row -->
+            <div class="row" id="row1">
+              <div class="col tic-box" id="topLeft">  </div>
+              <div class="col tic-box" id="topMiddle">  </div>
+              <div class="col tic-box" id="topRight">  </div>
+            </div>
+            <!-- Middle Row -->
+            <div class="row" id="row2">
+              <div class="col tic-box" id="middleLeft">  </div>
+              <div class="col tic-box" id="middleMiddle">  </div>
+              <div class="col tic-box" id="middleRight">  </div>
+            </div>
+            <!-- Bottom Row -->
+            <div class="row" id="row2">
+              <div class="col tic-box" id="bottomLeft">  </div>
+              <div class="col tic-box" id="bottomMiddle">  </div>
+              <div class="col tic-box" id="bottomRight">  </div>
+            </div>
+          </div>
+        </div>
+        <!-- Far right player 2 score column -->
+        <div class="col-3 align-items-center justify-content-center p-3" id="scoreCol2">
+          <div id="twoScore"> <div id="scoreHead2"> Player 2 Score:</div> <br><br> <div id="scoreDisplay2"></div>
+        </div>
+        </div>
+      </div> <!-- End of third row -->
+      <br>
+      <!-- Row 4 of 5 -->
+      <div class="row justify-content-center" id="row2">
+        <div class="col-3 text-center" id="r2c1">
+          <div class="form-control" id="displayWinner"></div>
+        </div>
+      </div> <!-- Eng of second row -->
+      <br>
+      <!-- Row 5 of 5 -->
+      <div class="row" id="row4">
+        <div class="col-12 mb-3 justify-content-center" id="r4c1">
+          <div class="text-center"><button id="resetButton">Reset Board And Players</button></div>
+        </div>
+      </div>
+      <!-- Below this is main body div end tag -->
+    </div>
+
+    
+    <!-- BootStrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9e24421ae4.js" crossorigin="anonymous"></script>
+    <!-- project JavaScript -->
+  </body>
+</html>

@@ -10,5 +10,9 @@ A repo template built with Vite.
 * $ npm install
 * $ npm run dev
 
+Updating the scripts in JSON to:
+   "build": "vite build --outDir docs",
+   "preview-build": "vite preview --outDir docs"
+Then do npm run build
 
 
