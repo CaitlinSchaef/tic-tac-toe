@@ -52,13 +52,11 @@ boxes.forEach(currentBox => {
             currentBox.textContent = 'X'
             playerTurn.textContent = "Player 2's Turn"
             checkWin()
-            checkDraw()
             currentPlayer = 'playerTwo'
        } else if (currentPlayer === 'playerTwo') {
             currentBox.textContent = 'O'
             playerTurn.textContent = "Player 1's Turn"
             checkWin()
-            checkDraw()
             currentPlayer = 'playerOne'
        } // every time you click you go through this once
     }
@@ -81,7 +79,9 @@ function checkWin() {
     if (winner === true) {
         displayWinner.textContent = `${currentPlayer} won!`
         gameWon = true
-        }
+    } else {
+        checkDraw()
+    }
         // maybe take out the alert and just make a text box???
         
     return winner
@@ -91,22 +91,21 @@ function checkWin() {
 
 function checkDraw() {
     // writing an every statement that checks if every box has text content
-    let draw = boxes.every(content => { 
-    if  (content.textContent !== "") {
-    displayWinner.textContent = "It's a draw!" }
-   })
-   console.log(draw)
-   return draw 
+    let draw = boxes.every(box => box.textContent === 'X' || box.textContent === 'O')
+    if (draw) {
+        displayWinner.textContent = "It's a draw!"
+    }
 }
 
 //Function to display player score
 
 // //Function to reset page
-// function clearBoard() {
-    // should be able to use same logic from draw
-//     if all boxes have text content 
-//     then board can be clicked
-// }
+// basically i need to make something that creates a conditional event listener 
+function clearBoard() {
+    boxes.map(boxItem => boxItem.textContent = '')
+}
+
+// boxes array loop through it and set the text content to empty 
 
 // //Reset button event listener 
-// resetButton.addEventListener('click', clearBoard)
+resetButton.addEventListener('click', clearBoard)
