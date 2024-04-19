@@ -21,6 +21,7 @@ const scoreDisplay1 = document.getElementById('scoreDisplay1')
 const scoreDisplay2 = document.getElementById('scoreDisplay2')
 const displayWinner = document.getElementById('displayWinner')
 
+let gameWon = false 
 
 let currentPlayer = 'playerOne' // 'playerOne' || 'playerTwo'
 
@@ -44,20 +45,22 @@ boxes.forEach(currentBox => {
 //Function to make game work (icons appear in box when clicked)/board state
 // this works as is 
     function gamePlay(currentBox) {
-
+        if (gameWon) {
+            return
+        }
        if (currentPlayer === 'playerOne') {
             currentBox.textContent = 'X'
             playerTurn.textContent = "Player 2's Turn"
             checkWin()
+            checkDraw()
             currentPlayer = 'playerTwo'
        } else if (currentPlayer === 'playerTwo') {
             currentBox.textContent = 'O'
             playerTurn.textContent = "Player 1's Turn"
             checkWin()
+            checkDraw()
             currentPlayer = 'playerOne'
        } // every time you click you go through this once
-    //    checkWin()
-    //    checkDraw()
     }
 
 
@@ -75,26 +78,35 @@ function checkWin() {
         // return (currentArray[0].textContent === currentArray[1].textContent && 
         //     currentArray[1].textContent === currentArray[2].textContent)
     });  
-    console.log(winner)
     if (winner === true) {
         displayWinner.textContent = `${currentPlayer} won!`
+        gameWon = true
         }
         // maybe take out the alert and just make a text box???
         
     return winner
-//    do i need to add a break?
-//    else if / continue playing
 }
 
-// fucntion to check draw
+// function to check draw
 
 function checkDraw() {
-    let draw = boxes.every(content => boxes.textcontent) //you're in the middle of writing this
-    displayWinner.textContent = "It's a draw!"
+    // writing an every statement that checks if every box has text content
+    let draw = boxes.every(content => { 
+    if  (content.textContent !== "") {
+    displayWinner.textContent = "It's a draw!" }
+   })
+   console.log(draw)
+   return draw 
 }
 
 //Function to display player score
 
-//Function to reset page
+// //Function to reset page
+// function clearBoard() {
+    // should be able to use same logic from draw
+//     if all boxes have text content 
+//     then board can be clicked
+// }
 
-
+// //Reset button event listener 
+// resetButton.addEventListener('click', clearBoard)
