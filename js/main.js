@@ -103,6 +103,8 @@ function checkDraw() {
 // basically i need to make something that creates a conditional event listener 
 function clearBoard() {
     boxes.map(boxItem => boxItem.textContent = '')
+    displayWinner.textContent = ''
+    playerTurn.textContent = ''
 }
 
 // boxes array loop through it and set the text content to empty 
