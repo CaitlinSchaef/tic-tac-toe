@@ -26,7 +26,7 @@ let p2Score = 0
 
 let gameWon = false
 
-let currentPlayer = 'playerOne' // 'playerOne' || 'playerTwo'
+let currentPlayer = 'Player One' // 'playerOne' || 'playerTwo'
 
 
 // this pulls all of the tic-box classes & adds event listener
@@ -53,16 +53,16 @@ function gamePlay(currentBox) {
     if (gameWon || currentBox.textContent !== "") {
         return
     }
-    if (currentPlayer === 'playerOne') {
+    if (currentPlayer === 'Player One') {
         currentBox.textContent = 'X'
         playerTurn.textContent = "Player 2's Turn"
         checkWin()
-        currentPlayer = 'playerTwo'
-    } else if (currentPlayer === 'playerTwo') {
+        currentPlayer = 'Player Two'
+    } else if (currentPlayer === 'Player Two') {
         currentBox.textContent = 'O'
         playerTurn.textContent = "Player 1's Turn"
         checkWin()
-        currentPlayer = 'playerOne'
+        currentPlayer = 'Player One'
     } // every time you click you go through this once
 }
 
@@ -106,11 +106,11 @@ function checkDraw() {
 function scoreDisplay(winner) {
     // parameter is a variable name, the argument is a valued pass
     //argument is in the actual calling of a function, parameter is definition
-    if (winner === 'playerOne') {
+    if (winner === 'Player One') {
         p1Score = p1Score + 1
         // same as p1Score++
         scoreDisplay1.textContent = p1Score
-    } else if (winner === 'playerTwo') {
+    } else if (winner === 'Player Two') {
         p2Score++
         // same as p2Score = p2Score + 1
         scoreDisplay2.textContent = p2Score
@@ -118,7 +118,6 @@ function scoreDisplay(winner) {
 }
 
 // //Function to reset page
-// basically i need to make something that creates a conditional event listener 
 // map returns a new array, forEach does not (we don't need a new array here)
 function clearBoard() {
     gameWon = false;
@@ -131,4 +130,4 @@ function clearBoard() {
 // boxes array loop through it and set the text content to empty 
 
 // //Reset button event listener 
-resetButton.addEventListener('click', clearBoard)
+resetButton.addEventListener('click', clearBoard) 
