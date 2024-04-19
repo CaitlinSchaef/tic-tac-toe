@@ -25,6 +25,9 @@ h1 {
 .tic-box {
   text-align: center;
   justify-content: center;
+  font-size: 70px;
+  color: #7c6d84;
+  text-shadow: 5px 5px 5px #e6d0dc;
 }
 
 /* adding height and width has it retain shape */
